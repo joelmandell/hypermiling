@@ -1,0 +1,9 @@
+{% if subjects %}
+    <ul>
+    {% for s in subjects %}
+        <li><a href="{{ s.id }}/">{{ s.subjectTitle }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No threads are available.</p>
+{% endif %}
