@@ -1,0 +1,13 @@
+{% if subjectTitle %}
+::<a href="{{ subjectId }}">{{ subjectTitle }}</a>
+{% endif %}
+
+{% if threads %}
+    <ul>
+    {% for t in threads %}
+        <a href="{{ t.id }}">{{ t.text }}</a>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Inga inlägg ännu.</p>
+{% endif %}

@@ -14,10 +14,17 @@ def index(request):
 	    })
 	return HttpResponse(template.render(context))
 
-def subject(request, subject):
-	output=u"<h2>Hej på dig här kommer trådar som tillhör id {0}</h2>".format(subjectid)
-	all_threads=Subject.objects.get(subjectTitle=subjectTitle).thread_set.all()
+def threads(request, subjectId):
+	
+	
+	threads=Subject.objects.get(id=subjectId).thread_set.all()
+	subjectTitle=Subject.objects.get(id=subjectId)
 
-	for t in all_threads:
-		output+=u"{0} <br />".format(t.threadTitle) 
-	return HttpResponse(output)
+	template = loader.get_template('forum/threads.html')
+	context = RequestContext(request, 
+	    {'threads':threads,
+	    'subjectTitle':subjectTitle,
+	    'subjectId':subjectId}
+	  )
+	
+	return HttpResponse(template.render(context))
