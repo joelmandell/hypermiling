@@ -24,12 +24,19 @@ def threads(request, subjectId):
 
 def thread(request, threadId):
   try:
-    t=Thread.objects.get(id=threadId).all()
-    title=t.threadTitle;
+
+    t=Thread.objects.get(id=threadId)
+    title=t.threadTitle
+    text=t.threadText
+    user=t.user.username
+    subjectId=Subject.objects.get(thread__id=threadId).id
+    subjectTitle=Subject.objects.get(thread__id=threadId).subjectTitle
     posts=Thread.objects.get(id=threadId).post_set.all()
-  except Subject.DoesNotExist:
+    
+  except Thread.DoesNotExist:
     raise Http404
-  context = {'threads': threads, 'subjectTitle':subjectTitle, 'subjectId':subjectId}
-  return render(request, 'forum/threads.html', context)
+  
+  context = {'title': title, 'text':text,'user':user, 'posts':posts,'subjectId':subjectId,'subjectTitle':subjectTitle}
+  return render(request, 'forum/thread.html', context)
 
 

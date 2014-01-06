@@ -1,9 +1,8 @@
 {% extends "base/base_index.html" %}
 {% debug % }
 
-
 {% block CO %}
-  <h3><a href="../">Kategorier</a>::<strong>{{subjectTitle}}</strong></h3>
+  <h3><a href="{% url 'index' %}">Kategorier</a>::<strong>{{subjectTitle}}</strong></h3>
 
   <section class="thread_box">
       <section class="thread_name"><strong>Trådnamn</strong></section>
@@ -13,7 +12,7 @@
 
   {% for s in threads %}
       <section class="thread_box">
-        <section class="thread_name"><a href="#{{s.id}}">{{s.threadTitle}}</a></section>
+        <section class="thread_name"><a href="{% url 'thread' s.id %}">{{s.threadTitle}}</a></section>
         <section class="thread_user">{{s.user.username}}</section>
         <section class="thread_date">{{s.dateModified}}</section>
       </section>

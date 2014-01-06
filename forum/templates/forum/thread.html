@@ -1,9 +1,28 @@
-{% if posts %}
-    <ul>
+{% extends "base/base_index.html" %}
+{% debug % }
+
+{% block CO %}
+<h3><a href="{% url 'index' %}">Kategorier</a>::<a href="{% url 'threads' subjectId %}">{{ subjectTitle }}</a>::<strong>{{ title }}</strong></h3>
+<div id="thread_article">
+    <section id="thread_section">
+        <h3>{{ user }} - {{ title }}<span class="nr" title="Första inlägget">#1</span></h3>
+        <p>
+            {{ text }}
+        </p>
+    </section>
+</div>
+{% if posts %}    
     {% for post in posts %}
-        <h3>post.text</h3>
+        <div class="thread_post_article">
+	<section class="thread_post_section">
+        <h3>{{ post.user.username }} - {{ post.dateModified }}<span class="nr" title="Inlägg nr #">#</span></h3>
+        <p>
+            {{ post.text }}
+        </p>
+        </section>
+        </div>
     {% endfor %}
-    </ul>
 {% else %}
     <p>Inga inlägg ännu.</p>
 {% endif %}
+{% endblock %}

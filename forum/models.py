@@ -15,12 +15,12 @@ class Thread(models.Model):
 	threadText = models.CharField(max_length=3000)
 	dateModified = models.DateTimeField()
 	def __unicode__(self):
-		return self.threadText
+		return self.threadTitle
 
 class Post(models.Model):
 	thread = models.ForeignKey(Thread)
 	user = models.ForeignKey(User)
 	text = models.CharField(max_length=3000)
-	dateModified = models.DateField()
+	dateModified = models.DateTimeField()
 	def __unicode__(self):
 		return self.text
