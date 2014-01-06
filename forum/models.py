@@ -15,7 +15,7 @@ class Thread(models.Model):
 	threadText = models.CharField(max_length=3000)
 	dateModified = models.DateTimeField()
 	def __unicode__(self):
-		return self.threadTitle
+		return self.threadText
 
 class Post(models.Model):
 	thread = models.ForeignKey(Thread)

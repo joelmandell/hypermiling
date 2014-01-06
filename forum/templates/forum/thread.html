@@ -1,0 +1,9 @@
+{% if posts %}
+    <ul>
+    {% for post in posts %}
+        <h3>post.text</h3>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Inga inlägg ännu.</p>
+{% endif %}
