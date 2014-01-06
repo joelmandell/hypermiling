@@ -1,0 +1,273 @@
+﻿html {
+    min-height: 100%;
+    font-size: .85em;
+    margin:0 auto;
+}
+
+.gravatar {
+    float:left;
+    position:relative;
+    margin-right:20px;
+    margin-top:20px;
+}
+
+.thread_box {
+    width:100%;
+    border-top:1px solid #d3d3d3;
+    display:table;
+    height:auto;
+    min-height:40px;
+}
+
+.thread_name {
+    width:40%;
+    float:left;
+    height:35px;
+    padding:5px;
+    display:table-column;
+}
+
+.thread_user {
+    width:25%;
+    float:left;
+    height:35px;
+    padding:5px;
+    display:table-column;
+}
+
+.thread_date {
+    width:20%;
+    float:right;
+    height:35px;
+    padding:5px;
+    display:table-column;
+}
+
+input[type=submit] {
+
+    background-color:#2a89fc;
+    color:#fff;
+    border:0px groove #000;
+    font-weight:bold;
+    height:35px;
+    font-family:'Trebuchet MS';
+
+}
+
+#post_text {
+    width:100%;
+    height:190px;
+}
+
+.nr 
+{
+    color:#5ac4f2;
+    float:right;
+    position:relative;
+}
+
+.error {
+    color:#ff0000;
+    font-size:13px;
+    font-weight:bolder;
+}
+
+.whoami
+{
+    float:right;
+    position:relative;
+    margin-top:15px;
+    margin-right:15px;
+    color:#fff;
+    font-weight:bolder;
+}
+
+.thread_post_article
+{
+    width:100%;
+    display:block;
+    border-bottom:1px solid #d3d3d3;
+}
+
+.thread_post_section {
+    padding:2px 10px 10px 10px;
+}
+
+#thread_article
+{
+    width:100%;
+    display:block;
+    border-bottom:1px solid #d3d3d3;
+}
+
+section #thread_section {
+    padding:2px 10px 10px 10px;
+}
+
+input[placeholder="Sök"] {
+    width:130px;
+    color:#000;
+}
+
+input[type=submit]:hover {
+    background-color:#5ac4f2;
+}
+
+#eData {
+
+    background-color:lightblue;
+    font-weight:bolder;
+
+}
+
+#thread_text {
+    width:100%;
+    border:1px solid #000;
+    height:190px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #000;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #000;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #000;
+}
+
+#form_data {
+
+    background-color:#eee;
+    color:#000;
+    margin:4px 4px 4px 4px;
+    border:solid;
+
+}
+
+body {
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-image:url("/static/img/stripe.png");
+    background-repeat:repeat-x;
+    width:960px;
+    margin:0 auto;
+}
+
+#pic1 {
+position:absolute;
+z-index:-1;
+bottom:0;
+left:-30px;    opacity:0.4;
+
+}
+
+#pic2 {
+position:absolute;
+z-index:-1;
+bottom:0;
+right:0;
+}
+
+#page {
+    background-color:#fff;
+    top:0;
+    width:960px;
+    -moz-box-shadow:0px 0px 35px 0px #000;
+    -webkit-box-shadow:0px 0px 35px 0px #000;
+    box-shadow:0px 0px 35px 0px #000;
+    display:table; /*the uggly hack - otherwise position:absolute could work in some cases....*/
+    margin:0 auto 0px;
+
+}
+
+#sidebar input {
+    border: 1px solid #000;
+    display: inline;
+}
+
+#logo {
+    width:100%;
+    background-image:url("/static/img/ecologo.png");
+    background-repeat:no-repeat;
+    background-color: #000;
+    height:250px;
+}
+
+#sidebar {
+    width:150px;
+    float:left;
+    margin-left:20px;
+    position:relative;
+    margin-bottom:140px;
+}
+
+#content {
+    margin-left:200px;
+    margin-right:20px;
+    top:0;
+    bottom:0;
+    position:relative;
+    margin-bottom:140px;
+    background-color:#fff;
+    width:700px;
+    white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+    overflow:inherit;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+footer {
+    width:960px;
+    margin-bottom:5px;
+    bottom:0;
+    clear:both;
+    position:relative;
+    margin-top:10px;
+    height:50px;
+}
+
+/* Navigation and their links */
+nav {
+    width:100%;
+    background-color:#232323;
+    height:50px;
+    position:relative;
+    margin-top:200px;
+    float:left;
+}
+
+ul
+{
+    list-style-type:none;
+    float:left;
+margin-left:-40px;    margin-top:0;
+}
+
+li
+{
+    width:85px;
+    height:50px;
+    background-color:#232323;
+    font-size:1em;
+    font-family:'Trebuchet MS';
+    float:left;
+}
+
+li:hover {
+    background-color:#cd7e29;
+}
+
+li a {
+    margin-top:15px;
+    margin-left:20px;
+    float:left;
+    color:#fff;
+    text-decoration:none;
+}

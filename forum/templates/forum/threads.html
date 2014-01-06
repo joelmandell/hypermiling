@@ -1,7 +1,21 @@
-<ul>
-<a href="../">Kategorier</a>::{{subjectTitle}}
+{% extends "base/base_index.html" %}
+{% debug % }
 
-{% for s in threads %}
-    <li><a href="{{ s.id }}">{{ s.threadTitle }}</a> Posted by: {{ s.user.username }} at {{ s.dateModified }}</li>
-{% endfor %}
-</ul>
+
+{% block CO %}
+  <h3><a href="../">Kategorier</a>::<strong>{{subjectTitle}}</strong></h3>
+
+  <section class="thread_box">
+      <section class="thread_name"><strong>Trådnamn</strong></section>
+      <section class="thread_user"><strong>Skapad av</strong></section>
+      <section class="thread_date"><strong>Senast uppdaterad</strong></section>
+  </section>
+
+  {% for s in threads %}
+      <section class="thread_box">
+        <section class="thread_name"><a href="#{{s.id}}">{{s.threadTitle}}</a></section>
+        <section class="thread_user">{{s.user.username}}</section>
+        <section class="thread_date">{{s.dateModified}}</section>
+      </section>
+  {% endfor %}
+{% endblock %}

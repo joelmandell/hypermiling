@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Snålkörning, community för ecodriving och hypermiling</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/Site.css" />
+</head>
+<body>
+    <section id="page">
+        <section id="logo">
+
+            <nav>
+                <ul class="links">
+                    <li id="home"><a href="#home">Hem</a></li>
+                    <li id="forum"><a href="#home">Forum</a></li>
+                    <li id="review"><a href="#home">Tester</a></li>
+                    <li id="member"><a href="#home">Medlem</a></li>
+                </ul>
+                <span class="whoami">@user</span>
+            </nav>
+
+        </section>
+
+        <section id="sidebar">
+
+            <!--<input type="search" placeholder="Sök" />-->
+
+            <h3>Senaste recensionen</h3>
+    
+            <p>
+                Nya renault clio är testad. 3.2l/100km säger tillverkaren,
+                kan snålkörning.se:s testförare klå det?
+            </p>
+                   
+            <h3>Nytt verktyg</h3>
+            <p>
+                Nu kan ni konvertera mpg till l/100km och viceversa i forumet!
+            </p>
+        </section>
+
+        <section id="content">
+        {% block CO %}{% endblock %}
+        </section>
+
+        
+    </section>
+    <footer>
+
+            <p>Copyright Joel Mandell 2013-2014</p>
+
+   </footer>
+
+    <script src="/static/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/nav.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").hide();
+        $("#content").css("width", "960px");
+        $("#content").css("margin-left", "20px");
+        $("#content").css("margin-right", "20px");
+    });
+</script>
+</body>
+</html>

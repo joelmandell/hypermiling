@@ -8,11 +8,10 @@ from forum.models import Thread
 
 def index(request):
   subjects = Subject.objects.order_by('dateModified')
-  template = loader.get_template('forum/index.html')
-  context = RequestContext(request, {
+  context = {
       'subjects':subjects,
-      })
-  return HttpResponse(template.render(context))
+      }
+  return render(request, 'forum/index.html', context)
 
 def threads(request, subjectId):
   try:
